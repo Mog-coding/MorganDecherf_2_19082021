@@ -1,23 +1,29 @@
+/* GLOBAL */
+
+
 /* BLOC PAGE */
 #main_wrapper{
-    width:80%;
+    width:1200px;
     margin: auto;
 }
 
 /* FOOTER */
 footer{
     display: flex;
-    background-color:rgb(242,242,242);
+    background-color:#F2F2F2;
 }
-footer > ul:nth-child(2){
-    margin-left: 10%;
-}
-footer > ul:nth-child(3){
-    margin-left: 10%;
+footer div{
+    flex:1;   
+    padding: 30px 50px 50px 50px; /*retrait padding h3*/
 }
 footer ul li{
-    list-style-type: none;  
-    }
+    list-style-type: none; 
+    padding-bottom: 15px;    
+}
+footer ul{
+    margin: 0px;
+    padding: 0px;    
+}
 a{
     text-decoration: none;
     color: black;
