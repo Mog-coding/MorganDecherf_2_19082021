@@ -1,6 +1,6 @@
 /* GLOBAL */
 @font-face{ font-family:"Raleway";
-	src:url("css/polices/Raleway-Regular.woff2") format("woff2"), url("css/polices/Raleway-Regular.ttf") format("truetype");
+	src:url("css/polices/Raleway-Medium.woff2") format("woff2"), url("css/polices/Raleway-Medium.ttf") format("truetype");
 }
 body{
     font-family: "Raleway", Verdana, sans-serif;
