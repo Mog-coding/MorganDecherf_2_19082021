@@ -1,12 +1,11 @@
 /* GLOBAL */
 @font-face{ font-family:"Raleway";
-	src:url("css/polices/raleway-v22-latin-regular.woff2") format("woff2"),
-    url("css/polices/raleway-v22-latin-regular.ttf") format("truetype"); 
+	src:url("css/polices/Raleway-Regular.woff2") format("woff2"), url("css/polices/Raleway-Regular.ttf") format("truetype");
 }
 body{
     font-family: "Raleway", Verdana, sans-serif;
 }
-    /* BLOC PAGE */
+/* BLOC PAGE */
 #main_wrapper{
     width:1200px;
     margin: auto;
