@@ -5,10 +5,12 @@
 body{
     font-family: "Raleway", Verdana, sans-serif;
 }
+
 /* BLOC PAGE */
 #main_wrapper{
-    width:1200px;
+    width: 1530px; /* largeur maquette */
     margin: auto;
+    max-width: 100%;
 }
 
 /* FOOTER */
