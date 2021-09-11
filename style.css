@@ -6,21 +6,114 @@ body{
     font-family: "Raleway", Verdana, sans-serif;
 }
 
-/* BLOC PAGE */
+
+/********************/
+/******************** BLOC PAGE ********************/
+/********************/
 #main_wrapper{
-    width: 1530px; /* largeur maquette */
     margin: auto;
     max-width: 100%;
 }
+section, header{
+    margin: 50px;
+    
+}
 
-/* FOOTER */
+
+/********************/
+/******************** ACTIVITE ********************/
+/********************/
+.container-activite{ 
+    display:flex;
+    justify-content: space-between;
+    height: 476px;
+    width: auto;
+}
+.container-activite-low{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 20%;
+}
+.block-large-2,.container-activite-low{ /* selection des 4 flex items */
+    height: 476px; 
+    width: 22.5%; /* LARGEUR des 4 blocks*/
+    border-radius: 0px 0px 22px 22px;
+}
+/* réglage HAUTEUR des flex-items */
+.block-large-2 img{  /*hauteur des 2 gros block*/
+    width: 100%;
+    height: 87.4%;
+    object-fit: cover;
+    border-radius: 22px 22px 0px 0px;
+}
+#block1{    /* image + legende */
+    height:52.8%;
+}
+#block1 img{ /*image dans le block */
+    width:100%;
+    height: 76.5%;
+    object-fit: cover;
+}
+#block2{    
+    height:37.4%;
+}
+#block2 img{
+    width: 100%;
+    height: 66.8%;
+    object-fit: cover;
+}
+#block3{    
+    height:43.8%;
+}
+#block3 img{
+    width: 100%;
+    height: 71.9%;
+    object-fit: cover;
+}
+#block4{    
+    height:46.7%;
+}
+#block4 img{
+    width: 100%;
+    height: 73.6%;
+    object-fit: cover;
+}
+/* mise en forme des flex-items */
+.block-large-2{
+    box-shadow: 0 5px 10px -5px #c8c3c3;
+}
+.block-small-4 img{
+    border-radius: 22px 22px 0px 0px;  
+}
+.block-small-4{
+    border-radius: 0px 0px 22px 22px;
+    box-shadow: 0 5px 10px -5px #c8c3c3;
+}
+/*mise en forme titres images*/
+.block-large-2 div, .block-small-4 div{
+    color: black;
+    font-size:1.05em;
+    font-weight: bold;
+    margin-top: 16px;
+    margin-left: 22px;
+}
+.block-large-2 a, .block-small-4 a{
+    text-decoration: none;
+}
+
+
+/********************/
+/******************** FOOTER ********************/
+/********************/
 footer{
     display: flex;
     background-color:#F2F2F2;
 }
 footer div{
     flex: 0.31;  
-    padding: 2% 2% 2.8% 3.5%; 
+    padding: 30px 30px 40px 50px; 
 }
 footer ul{          
     margin: 0px;
@@ -28,7 +121,10 @@ footer ul{
 }
 footer ul li{
     list-style-type: none; 
-    padding-bottom: 3.8%;     
+    padding-bottom: 13px;
+}
+footer h3{
+    margin-bottom:18px;
 }
 footer a{
     text-decoration: none;
