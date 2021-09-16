@@ -17,7 +17,7 @@ body{
     max-width: 1440px;
 }
 section, header{
-    margin: 60px 50px 60px 50px;
+    margin: 60px 50px;
 }
 
 
@@ -45,7 +45,6 @@ aside{
     background-color:#F2F2F2;
     border-radius: 22px 22px 22px 22px;
 }
-
 
 /* Réglages hébergement */
 .container-hebergement{
@@ -80,7 +79,6 @@ article > div:last-child{
     font-weight: bold;
     font-size: 1.08em;
 }
-
 /*réglage populaire */
 .container-populaire{
     display: flex;
@@ -101,12 +99,11 @@ article > div:last-child{
     object-fit: cover;
     border-radius: 16px 0px 0px 16px;
 }
-
 /* mise en forme */
 .block-3 div{
-    max-height: 150px; /*le cadre est bien limité mais le texte sort voir lecours A VIRER */
+    max-height: 150px; 
     margin-left: 44.4%;
-    margin-top: -125px; /*trouvé empiriquement A VIRER */
+    margin-top: -125px; /*trouvé empiriquement --- */
     padding-right: 55px;
 }
 .block-3 span{
@@ -121,92 +118,65 @@ section a{
     color: black;
 }
 
+
+
 /********************/
 /******************** ACTIVITE ********************/
 /********************/
 .container-activite{ 
-    display:flex;
+    display: flex;
     justify-content: space-between;
     height: 442px;
-    width: auto;
+    width: 100%;
 }
-.container-activite-low{
+.carte-large,.sous-container-activite{  /*4 flex items */
+    width: 22.5%;  
+}
+.sous-container-activite{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     flex-wrap: wrap;
-    width: 20%;
 }
-.block-large-2,.container-activite-low{ /* selection des 4 flex items */
-    height: 442px; 
-    width: 22.5%; /* LARGEUR des 4 blocks*/
-    border-radius: 22px 22px 22px 22px;
-}
-/* réglage HAUTEUR des flex-items */
-.block-large-2 img{  /*hauteur des 2 gros block*/
-    width: 100%;
-    height: 87.4%;
-    object-fit: cover;
-    border-radius: 22px 22px 0px 0px;
-}
-
-#block1{    /* image + legende */
+.carte-medium{    /* image + div */
     height:52.8%;
 }
-#block1 img{ /*image dans le block */
-    width:100%;
-    height: 76.5%;
-    object-fit: cover;
-}
-#block2{    
+.carte-small{    
     height:37.4%;
 }
-#block2 img{
+.carte-large img{  
+    height: 87.4%;
     width: 100%;
+}
+.carte-medium img{ 
+    height: 76.5%;
+    width:100%;
+}
+.carte-small img{
     height: 66.8%;
-    object-fit: cover;
-}
-#block3{    
-    height:43.8%;
-}
-#block3 img{
     width: 100%;
-    height: 71.9%;
+}
+/*mise en forme images, titre et h2*/
+section img{  
+    border-radius: 22px 22px 0px 0px;
     object-fit: cover;
 }
-#block4{    
-    height:46.7%;
-}
-#block4 img{
-    width: 100%;
-    height: 73.6%;
-    object-fit: cover;
-}
-/* mise en forme des flex-items */
-.block-large-2{
-   box-shadow: 0 7px 13px -5px #c8c3c3;
-   
-}
-.block-small-4 img{
-    border-radius: 22px 22px 0px 0px;  
-}
-.block-small-4{
-    border-radius: 0px 0px 22px 22px;
+.carte-medium, .carte-small, .carte-large{ /*tous les flex item*/
     box-shadow: 0 7px 13px -5px #c8c3c3;
+    border-radius: 22px 22px 22px 22px;
 }
-/*mise en forme titres images et h2*/
-.block-large-2 div, .block-small-4 div{
+.carte-large div, .carte-medium div, .carte-small div{
     color: black;
     font-weight: bold;
     margin-top: 16px;
     margin-left: 22px;
 }
-.block-large-2 a, .block-small-4 a{
+.carte-large a, .carte-medium a, .carte-small a{
     text-decoration: none;
 }
 section h2{
     font-size:1.4em;
-    margin: 20px 0px 20px 0px; /* a modifier */
+    margin: 20px 0px; 
 }
 
 
@@ -217,10 +187,11 @@ footer{
     display: flex;
     background-color:#F2F2F2; 
     height: 217px;
+    padding-left: 50px;
 }
 footer div{
-    flex: 0.315;
-    padding: 26px 0px 50px 50px;
+    flex: 1;
+    padding: 25px 0px 50px 50px;
 }
 footer h3{
     margin-bottom:19px;
