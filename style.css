@@ -16,13 +16,27 @@ body{
     margin: auto;
     max-width: 1440px;
 }
-section, header{
-    margin: 60px 50px;
+/*réglages vertical sections*/
+header{
+    margin: 20px 50px; 
+}
+.mainRecherche{
+    margin: 35px 55px; /* y x */
+}
+main > section{
+    margin: 0px 50px 60px 50px;
 }
 
+/********************/
+/******************** HEADER ********************/
+/********************/
+header{
+    display: flex;
+    justify-content: space-between;
+}
 
 /********************/
-/******************** SECTION recherche ********************/
+/******************** MAIN recherche ********************/
 /********************/
 form{
     display: flex;
@@ -47,8 +61,8 @@ form{
 }
 .search input{
    height: 48px;
-   width: 230px;
-   font-size: 1.3em;
+   width: 220px;
+   font-size: 1.1em;
    outline: none; /*retire l'outline d'input qd on clique */
    border: none; /* retire la bordure grise d'input */
    padding-left: 15px;
@@ -74,11 +88,13 @@ form{
 /*Filtres*/
 .containerTitreFiltres{
     display: flex;
-    width: 100px;
 }
 .titreFiltres{
     display: flex;
     align-items: center;
+    flex-shrink: 0;
+    padding-left: 8px;
+    padding-right: 25px;
 }
 .containerFiltres{
     display: flex;
@@ -86,7 +102,6 @@ form{
 }
 .filtres{
     display:flex;
-    margin-left: 24px;
 }
 .iconesRonds{
     display: flex;
@@ -121,7 +136,7 @@ form{
 /*Info*/
 .info{
     display: flex;
-    margin-top: 31px;
+    margin-top: 35px;
 }
 .info i{
     display: flex;
@@ -135,16 +150,16 @@ form{
     color:rgb(0, 101, 252);
 }
 /*alignement vertical de section recherche*/
-.sectionRecherche h2{
+.mainRecherche h2{
     margin: 0px;
+    font-size: 1.4em;
 }
-.sectionRecherche > p:nth-child(2){
-    margin: 16px 0px 19px 0px; 
+.mainRecherche > p:nth-child(2){
+    margin: 8px 0px 20px 0px; 
 }
-section form{
+main form{
     margin-bottom: 31px;
 }
-
 
 /********************/
 /******************** SECTION ARTICLE ASIDE ********************/
