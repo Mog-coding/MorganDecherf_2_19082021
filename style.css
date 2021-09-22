@@ -18,7 +18,7 @@ body{
 }
 /*réglages vertical sections*/
 header{
-    margin: 20px 50px; 
+    margin-left: 55px;
 }
 .mainRecherche{
     margin: 35px 55px; /* y x */
@@ -27,6 +27,7 @@ main > section{
     margin: 0px 50px 60px 50px;
 }
 
+
 /********************/
 /******************** HEADER ********************/
 /********************/
@@ -34,6 +35,38 @@ header{
     display: flex;
     justify-content: space-between;
 }
+.reserviaImage{
+    height: 95px;
+    display: flex;
+    align-items: flex-end;
+    flex-shrink: 0; /* */
+}
+header nav{
+    display: flex;
+}
+header nav div{
+    flex: 0 0 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header img{
+    width: 70%;
+    height: 70%;
+}
+/* mise en forme liens*/
+header a{
+    text-decoration: none;
+    color: black;
+}
+nav div:last-child a{
+    font-weight: bold;
+    color: rgb(0, 101, 252);
+}
+
+
+
+
 
 /********************/
 /******************** MAIN recherche ********************/
