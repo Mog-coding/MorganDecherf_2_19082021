@@ -191,28 +191,28 @@ main form {
 }
 
 /********************/
-/******************** SECTION ARTICLE ASIDE ********************/
+/******************** SECTION hebergement ASIDE ********************/
 /********************/
-.container-article-aside {
+.container-hebergement-aside {
   display: flex;
   justify-content: space-between;
   height: 621px;
 }
-article {
+.hebergement {
   width: 59.2%; /* -2 padding, ils sajoutent */
 }
 aside {
   width: 25.5%;
 }
 aside,
-article {
+.hebergement {
   padding-left: 40px;
   padding-right: 40px;
   background-color: #f2f2f2;
   border-radius: 22px 22px 22px 22px;
 }
-/* REGLAGES ARTICLE */
-.container-article {
+/* REGLAGES hebergement */
+.container-hebergement {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -220,7 +220,7 @@ article {
   align-content: space-between;
   height: 427px;
 }
-.carte-article {
+.carte-hebergement {
   height: 188px; /*padding s'ajoute à height*/
   padding: 5px;
   width: 30%; /*padding s'ajoute à width*/
@@ -228,15 +228,15 @@ article {
   border-radius: 22px 22px 22px 22px;
   box-shadow: 0 7px 13px -5px #c8c3c3;
 }
-.carte-article img {
+.carte-hebergement img {
   height: 114px;
   width: 100%;
   object-fit: cover;
   border-radius: 19px 19px 0px 0px;
 }
-/*mise en forme article*/
+/*mise en forme hebergement*/
 .titre h2 {
-  margin: 43px 0px 22px 0px; /* titre article et aside */
+  margin: 43px 0px 22px 0px; /* titre hebergement et aside */
 }
 /*réglages légende image*/
 .legende > p:nth-child(1) {
@@ -250,7 +250,7 @@ article {
 .legende div {
   margin-left: 10px;
 }
-article > div:last-child {
+.hebergement > div:last-child {
   margin-top: 40px;  /* afficher plus */
   margin-left: 3px;
   font-weight: bold;
