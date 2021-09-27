@@ -28,7 +28,7 @@ main {
 .mainRecherche {
   padding-top: 25px; /* y x */
   padding-bottom: 35px;
-  padding-left: 6px; 
+  padding-left: 6px;
 }
 main > section {
   margin-top: 0px; /* A RETIRER ? */
@@ -100,7 +100,7 @@ form {
   height: 48px;
   width: 220px;
   font-size: 1.1em;
-  outline: none; /*retire l'outline d'input qd on clique */
+  outline: none; /* retire l'outline d'input qd on clique */
   border: none; /* retire la bordure grise d'input */
   padding-left: 15px;
   color: black;
@@ -123,7 +123,7 @@ form {
   font-weight: bold;
 }
 /*Filtres*/
-.containerTitreFiltres {
+.containerTitreEtFiltres {
   display: flex;
 }
 .titreFiltres {
@@ -203,10 +203,10 @@ main form {
 /********************/
 /******************** SECTION HEBERGEMENTS ASIDE ********************/
 /********************/
-.container-hebergements-aside {
+.containerHebergementsEtAside {
   display: flex;
   justify-content: space-between;
-  height: 621px;
+  min-height: 621px;
 }
 .hebergements {
   width: 59.2%; /* -2 padding, ils sajoutent */
@@ -220,7 +220,6 @@ aside {
   background-color: #f2f2f2;
   border-radius: 22px 22px 22px 22px;
 }
-
 /* REGLAGES HEBERGEMENTS */
 .container-hebergements {
   display: flex;
@@ -228,7 +227,7 @@ aside {
   flex-wrap: wrap;
   justify-content: space-between;
   align-content: space-between;
-  height: 427px;
+  min-height: 427px;                      /* changement RESPONSIVE 2 */
 }
 .carte-hebergements {
   height: 188px; /*padding s'ajoute à height*/
@@ -261,8 +260,8 @@ aside {
 .legende div {
   margin-left: 10px;
 }
-.hebergements > div:last-child {
-  margin: 40px 0px 5px 3px; /* afficher plus */
+.afficherPlus {
+  margin: 40px 0px 5px 3px; 
   margin-bottom: 5px;
   font-weight: bold;
   font-size: 1.08em;
@@ -277,7 +276,7 @@ aside {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 498px;
+  max-height: 498px;                      /* changement RESPONSIVE 3 */
 }
 .carte-aside {
   display: flex;
@@ -366,7 +365,7 @@ i {
 }
 .carte-large,
 .sous-container-activite {
-  width: 22.5%; /*4 flex items */
+  width: 22.5%; /* 4 flex items */
 }
 .sous-container-activite {
   display: flex;
@@ -428,7 +427,7 @@ section > h2:nth-child(1) {
 footer {
   display: flex;
   background-color: #f2f2f2;
-  height: 117px;
+  min-height: 117px;
   padding: 50px;
   margin-top: 60px;
 }
@@ -447,3 +446,53 @@ footer ul li {
   list-style-type: none;
   padding-bottom: 12px;
 }
+
+/********************/
+/******************** MEDIA QUERIES ********************/
+/********************/
+
+/* media queries version mobile */
+@media screen and (max-width: 480px) {
+footer {
+    flex-direction: column;
+  }
+}
+/* media queries version tablette (à la base max-width: 1024px) */
+@media (min-width: 480px) and (max-width: 1200px) {
+.hebergements, aside {
+    width: auto;
+}
+.carte-hebergements{
+    width: 47%;
+    margin-bottom: 25px;
+}
+.afficherPlus {
+  margin: 0px 0px 5px 3px; 
+}
+.container-aside{
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.carte-aside{
+  width: 47%;
+  margin-bottom: 25px;
+}
+}
+/* media queries version mobile et tablette */
+@media screen and (max-width: 1200px) {
+.containerTitreEtFiltres {
+  flex-direction: column;
+}
+.titreFiltres{
+  margin-bottom: 20px;
+}
+.containerHebergementsEtAside {
+  flex-direction: column-reverse;
+}
+aside {
+  margin-bottom: 35px; /* a regler */
+}
+}
+
+
+
