@@ -42,35 +42,53 @@ main section:last-child {
 /********************/
 header {
   display: flex;
-  justify-content: space-between;
+}
+header::after {
+  content: "";
+  flex-grow: 1;
+  order: 0;
 }
 .reserviaImage {
   height: 110px;
   display: flex;
   align-items: flex-end;
 }
-header nav {
-  display: flex;
+header img {
+  height: 72px;
+  width: 100px;
 }
-header nav div {
+header nav{
+ display: flex;
+ order: 1;
+}
+header a {
+  order: 1;
   display: flex;
   width: 160px; /* width pris en compte, basis = auto */
   justify-content: center;
   align-items: center;
-}
-header img {
-  height: 72px;
-  width: 100px;
 }
 /* mise en forme liens*/
 header a {
   text-decoration: none;
   color: black;
 }
-nav div:last-child a {
+header a:hover {
+  border-top: rgb(0, 101, 252) 5px solid;
+  position: relative;
+  bottom: 2px;
+}
+.sinscrire {
   font-weight: bold;
   color: rgb(0, 101, 252);
 }
+header nav a:hover {
+  color: rgb(0, 101, 252)
+}
+.sinscrire:hover {
+  color: rgb(0, 50, 252)
+}
+
 
 /********************/
 /******************** MAIN recherche ********************/
@@ -122,6 +140,9 @@ form {
   color: white;
   font-weight: bold;
 }
+.loupe{
+  display: none;
+}
 /*Filtres*/
 .containerTitreEtFiltres {
   display: flex;
@@ -135,6 +156,7 @@ form {
 }
 .containerFiltres {
   display: flex;
+  flex-wrap: wrap;
   margin-left: 9px;
 }
 .filtres {
@@ -170,6 +192,10 @@ form {
 .titreFiltres {
   font-weight: bold;
   font-size: 1.1em;
+}
+.texteFiltres:hover{
+  color: white;
+  background-color: rgb(0, 101, 252);
 }
 /*Info*/
 .info {
@@ -227,7 +253,7 @@ aside {
   flex-wrap: wrap;
   justify-content: space-between;
   align-content: space-between;
-  min-height: 427px;                      /* changement RESPONSIVE 2 */
+  min-height: 427px; /* changement RESPONSIVE 2 */
 }
 .carte-hebergements {
   height: 188px; /*padding s'ajoute à height*/
@@ -261,7 +287,7 @@ aside {
   margin-left: 10px;
 }
 .afficherPlus {
-  margin: 40px 0px 5px 3px; 
+  margin: 40px 0px 5px 3px;
   margin-bottom: 5px;
   font-weight: bold;
   font-size: 1.08em;
@@ -276,7 +302,7 @@ aside {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  max-height: 498px;                      /* changement RESPONSIVE 3 */
+  height: 498px; /* changement RESPONSIVE 3 */
 }
 .carte-aside {
   display: flex;
@@ -361,7 +387,6 @@ i {
   display: flex;
   justify-content: space-between;
   height: 442px;
-  width: 100%;
 }
 .carte-large,
 .sous-container-activite {
@@ -371,7 +396,6 @@ i {
   display: flex;
   flex-direction: column; /* image + div */
   justify-content: space-between;
-  flex-wrap: wrap;
 }
 .carte-medium {
   height: 52.8%;
@@ -446,53 +470,122 @@ footer ul li {
   list-style-type: none;
   padding-bottom: 12px;
 }
+footer a:hover{
+  color:rgb(0, 101, 252);
+}
 
 /********************/
 /******************** MEDIA QUERIES ********************/
 /********************/
 
-/* media queries version mobile */
+/* media queries version MOBILE */
 @media screen and (max-width: 480px) {
-footer {
+  footer {
     flex-direction: column;
   }
 }
-/* media queries version tablette (à la base max-width: 1024px) */
-@media (min-width: 480px) and (max-width: 1200px) {
-.hebergements, aside {
-    width: auto;
+/* media queries INTERMEDIAIRE */
+/*header*/
+@media screen and (max-width: 700px) {
+  header {
+    flex-wrap: wrap;
+  }
+  header div{
+    margin-right: 90px; /* force le wrap des 2 liens <a> */
+  }
+  header nav{
+    order: 2;
+    height: 70px;
+    flex: 1; 
+  }
+  header nav a{
+    flex: 1;
+  }
+  .reserviaImage {
+    height: 80px;
+ }
+ header nav a:hover {
+    border-bottom: rgb(0, 101, 252) 3px solid;
+    border-top: rgb(0, 101, 252) 0px solid;
+    position: relative;
+    top: 2px;
+    bottom: 0px;
+ }
+ /* main recherche */
+.texteRechercher {
+  display: none;
 }
-.carte-hebergements{
+.loupe {
+  display: block;
+}
+.bouton {
+  width: 50px;
+  border-radius: 15px 15px 15px 15px;
+  position: relative;
+  right: 15px;
+}
+.bouton i {
+  font-size: 1em;
+}
+}
+/* media queries version TABLETTE (à la base max-width: 1024px) */
+@media (min-width: 480px) and (max-width: 1200px) {
+  .hebergements,
+  aside {
+    width: auto;
+  }
+  .carte-hebergements {
     width: 47%;
     margin-bottom: 25px;
-}
-.afficherPlus {
-  margin: 0px 0px 5px 3px; 
-}
-.container-aside{
-  flex-direction: row;
+  }
+  .afficherPlus {
+    margin: 0px 0px 5px 3px;
+  }
+  .container-aside {
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 340px;
+   }
+  .carte-aside {
+    width: 47%;
+    margin-bottom: 25px;
+  }
+.container-activite {
   flex-wrap: wrap;
+  height: 930px; /* 442 x 2 + 45px padding */
+  }
+  .carte-large,
+  .sous-container-activite {
+    width: 48%; /* 4 flex items */
+    height: 442px;
+  }
+.container-activite > a:first-child,
+.container-activite > div:nth-child(2) {
+  margin-bottom: 45px; /* margin entre les 2 groupes de flex activités */
 }
-.carte-aside{
-  width: 47%;
-  margin-bottom: 25px;
+footer div {
+  padding-left: 50px;
 }
-}
-/* media queries version mobile et tablette */
+} 
+/* media queries version MOBILE ET TABLETTE */
 @media screen and (max-width: 1200px) {
-.containerTitreEtFiltres {
-  flex-direction: column;
+  .containerTitreEtFiltres {
+    flex-direction: column;
+  }
+  .filtres {
+    margin-top: 15px;
+  }
+  .containerHebergementsEtAside {
+    flex-direction: column-reverse;
+  }
+  aside {
+    margin-bottom: 35px; /* a regler */
+  }
+  header {
+    padding-left: 5px;
+  }
+  main {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
 }
-.titreFiltres{
-  margin-bottom: 20px;
-}
-.containerHebergementsEtAside {
-  flex-direction: column-reverse;
-}
-aside {
-  margin-bottom: 35px; /* a regler */
-}
-}
-
-
-
