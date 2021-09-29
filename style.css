@@ -1,4 +1,6 @@
-/* GLOBAL */
+/********************/
+/******************** GLOBAL ********************/
+/********************/
 @font-face {
   font-family: "Raleway";
   src: url("css/polices/Raleway-Medium.woff2") format("woff2"),
@@ -26,15 +28,12 @@ main {
 }
 /*réglages vertical sections*/
 .mainRecherche {
-  padding-top: 25px; /* y x */
+  padding-top: 25px; 
   padding-bottom: 35px;
   padding-left: 6px;
 }
-main > section {
-  margin-top: 0px; /* A RETIRER ? */
-}
-main section:last-child {
-  margin-top: 60px; /* section activité */
+.sectionActivite {
+  margin-top: 60px;
 }
 
 /********************/
@@ -57,14 +56,14 @@ header img {
   height: 72px;
   width: 100px;
 }
-header nav{
- display: flex;
- order: 1;
+header nav {
+  display: flex;
+  order: 1;
 }
 header a {
   order: 1;
   display: flex;
-  width: 160px; /* width pris en compte, basis = auto */
+  width: 160px; 
   justify-content: center;
   align-items: center;
 }
@@ -83,12 +82,11 @@ header a:hover {
   color: rgb(0, 101, 252);
 }
 header nav a:hover {
-  color: rgb(0, 101, 252)
+  color: rgb(0, 101, 252);
 }
 .sinscrire:hover {
-  color: rgb(0, 50, 252)
+  color: rgb(0, 50, 252);
 }
-
 
 /********************/
 /******************** MAIN recherche ********************/
@@ -118,7 +116,7 @@ form {
   height: 48px;
   width: 220px;
   font-size: 1.1em;
-  outline: none; /* retire l'outline d'input qd on clique */
+  outline: none; /* retire l'outline d'input quand on clique */
   border: none; /* retire la bordure grise d'input */
   padding-left: 15px;
   color: black;
@@ -140,7 +138,7 @@ form {
   color: white;
   font-weight: bold;
 }
-.loupe{
+.loupe {
   display: none;
 }
 /*Filtres*/
@@ -193,11 +191,11 @@ form {
   font-weight: bold;
   font-size: 1.1em;
 }
-.texteFiltres:hover{
+.texteFiltres:hover {
   color: white;
   background-color: rgb(0, 101, 252);
 }
-/*Info*/
+/*Icone info*/
 .info {
   display: flex;
   margin-top: 35px;
@@ -214,12 +212,12 @@ form {
   border-radius: 50%; /*crée un cercle*/
   color: rgb(0, 101, 252);
 }
-/*alignement vertical de section recherche*/
+/*alignement vertical de main recherche*/
 .mainRecherche h2 {
   margin: 0px;
   font-size: 1.4em;
 }
-.mainRecherche > p:nth-child(2) {
+.mainRecherche > p {
   margin: 8px 0px 20px 0px;
 }
 main form {
@@ -235,7 +233,7 @@ main form {
   min-height: 621px;
 }
 .hebergements {
-  width: 59.2%; /* -2 padding, ils sajoutent */
+  width: 59.2%; /* -2 padding */
   padding: 40px;
   background-color: #f2f2f2;
   border-radius: 22px 22px 22px 22px;
@@ -253,12 +251,12 @@ aside {
   flex-wrap: wrap;
   justify-content: space-between;
   align-content: space-between;
-  min-height: 427px; /* changement RESPONSIVE 2 */
+  min-height: 427px; 
 }
 .carte-hebergements {
-  height: 188px; /*padding s'ajoute à height*/
+  height: 188px; /* - padding */
   padding: 5px;
-  width: 30%; /*padding s'ajoute à width*/
+  width: 30%; /* - padding */
   background-color: white;
   border-radius: 22px 22px 22px 22px;
   box-shadow: 0 7px 13px -5px #c8c3c3;
@@ -269,7 +267,6 @@ aside {
   object-fit: cover;
   border-radius: 19px 19px 0px 0px;
 }
-/*mise en forme hebergements*/
 .titreHebergements h2 {
   margin: 3px 0px 22px 0px;
   font-size: 1.4em;
@@ -288,7 +285,6 @@ aside {
 }
 .afficherPlus {
   margin: 40px 0px 5px 3px;
-  margin-bottom: 5px;
   font-weight: bold;
   font-size: 1.08em;
 }
@@ -302,12 +298,12 @@ aside {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 498px; /* changement RESPONSIVE 3 */
+  height: 498px; 
 }
 .carte-aside {
   display: flex;
   justify-content: space-between;
-  height: 133px; /*-10px*/
+  height: 133px; /*-padding*/
   padding: 5px;
   background-color: white;
   border-radius: 21px 21px 21px 21px;
@@ -393,8 +389,8 @@ i {
   width: 22.5%; /* 4 flex items */
 }
 .sous-container-activite {
-  display: flex;
-  flex-direction: column; /* image + div */
+  display: flex;  /* image + div */
+  flex-direction: column; 
   justify-content: space-between;
 }
 .carte-medium {
@@ -439,7 +435,7 @@ section img {
 .carte-small a {
   text-decoration: none;
 }
-section > h2:nth-child(1) {
+.sectionActivite h2 {
   /*titre activite */
   font-size: 1.4em;
   margin: 0px 0px 20px 0px;
@@ -470,66 +466,188 @@ footer ul li {
   list-style-type: none;
   padding-bottom: 12px;
 }
-footer a:hover{
-  color:rgb(0, 101, 252);
+footer a:hover {
+  color: rgb(0, 101, 252);
 }
 
+/***************************************************************************/
+/******************** MEDIA QUERIES ****************************************/
+/***************************************************************************/
+/* 480px remplacé par 600px et 1024px par 1200px */
+
 /********************/
-/******************** MEDIA QUERIES ********************/
+/******************** version MOBILE < 400px ********************/
 /********************/
 
-/* media queries version MOBILE */
-@media screen and (max-width: 480px) {
+/********************/
+/******************** version MOBILE < 600px ********************/
+/********************/
+@media screen and (max-width: 600px) {
+  main {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .reserviaImage {
+    margin-right: 0px; 
+    padding-left: 20px;
+  }
+  .mainRecherche {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  aside {
+    width: auto;
+    height: 508px; /* -72px padding */
+    padding: 40px 20px 32px 20px;
+    margin-bottom: 0px;
+    background-color: #f2f2f2;
+    border-radius: 0px 0px 0px 0px;
+  }
+  .container-aside {
+    flex-direction: column;
+    width: 100%;
+    height: 455px;
+  }
+  .carte-aside {
+    height: 133px; /*-10px padding */
+  }
+  .hebergements {
+    width: auto; /* -2 padding, ils sajoutent */
+    height: 1380px; /* 1400 */
+    padding: 40px 20px 20px 20px;
+    background-color: white;
+    border-radius: 0px;
+  }
+  .container-hebergements {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: auto;
+    height: 1250px; /* 1280 */
+  }
+  .carte-hebergements {
+    width: auto;
+    margin-bottom: 0px;
+  }
+  .afficherPlus {
+    margin: 30px 0px 5px 3px;
+  }
+  .sectionActivite {
+    padding: 0px 20px 50px 20px;
+    margin-top: 0px;
+  }
+  .container-activite {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 1240px;
+  }
+  .carte-large,
+  .sous-container-activite {
+    width: 100%; /* 4 flex items */
+  }
+  .sous-container-activite {
+    display: flex;
+    flex-direction: column; /* image + div */
+    justify-content: space-between;
+    height: 400px;
+  }
+  .carte-large {
+    height: 190px;
+  }
+  .carte-medium {
+    height: 190px;
+  }
+  .carte-small {
+    height: 190px;
+  }
+  .carte-large img {
+    height: 70%;
+    width: 100%;
+  }
+  .carte-medium img {
+    height: 70%;
+    width: 100%;
+  }
+  .carte-small img {
+    height: 70%;
+    width: 100%;
+  }
   footer {
     flex-direction: column;
+    margin-top: 0px;
+  }
+  footer div {
+    margin-bottom: 30px;
   }
 }
-/* media queries INTERMEDIAIRE */
+
+/********************/
+/******************** version MOBILE intermédiare < 700px ********************/
+/********************/
 /*header*/
 @media screen and (max-width: 700px) {
   header {
     flex-wrap: wrap;
   }
-  header div{
-    margin-right: 90px; /* force le wrap des 2 liens <a> */
-  }
-  header nav{
+  header nav {
     order: 2;
     height: 70px;
-    flex: 1; 
+    flex: 1;
   }
-  header nav a{
+  header nav a {
     flex: 1;
   }
   .reserviaImage {
     height: 80px;
- }
- header nav a:hover {
+  }
+  header nav a:hover {
     border-bottom: rgb(0, 101, 252) 3px solid;
     border-top: rgb(0, 101, 252) 0px solid;
     position: relative;
     top: 2px;
     bottom: 0px;
- }
- /* main recherche */
-.texteRechercher {
-  display: none;
+  }
+  /* main recherche */
+  .texteRechercher {
+    display: none;
+  }
+  .loupe {
+    display: block;
+  }
+  .bouton {
+    width: 50px;
+    border-radius: 15px 15px 15px 15px;
+    position: relative;
+    right: 15px;
+  }
+  .bouton i {
+    font-size: 1em;
+  }
 }
-.loupe {
-  display: block;
+
+/********************/
+/******************** version MOBILE intermédiaire > 600px, < 700px ********************/
+/********************/
+@media (min-width: 600px) and (max-width: 700px) {
+  .reserviaImage {
+    margin-right: 60px; /* force le wrap des 2 liens <a> */
+  }
 }
-.bouton {
-  width: 50px;
-  border-radius: 15px 15px 15px 15px;
-  position: relative;
-  right: 15px;
-}
-.bouton i {
-  font-size: 1em;
-}
-}
-/* media queries version TABLETTE (à la base max-width: 1024px) */
-@media (min-width: 480px) and (max-width: 1200px) {
+
+/********************/
+/******************** version TABLETTE > 600px, < 1200px ********************/
+/********************/
+@media (min-width: 600px) and (max-width: 1200px) {
+  main {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .mainRecherche {
+    padding-left: 40px;
+  }
+  .reserviaImage {
+    margin-left: 40px;
+  }
   .hebergements,
   aside {
     width: auto;
@@ -541,33 +659,39 @@ footer a:hover{
   .afficherPlus {
     margin: 0px 0px 5px 3px;
   }
+  aside {
+    margin-bottom: 35px;
+  }
   .container-aside {
     flex-direction: row;
     flex-wrap: wrap;
     height: 340px;
-   }
+  }
   .carte-aside {
     width: 47%;
     margin-bottom: 25px;
   }
-.container-activite {
-  flex-wrap: wrap;
-  height: 930px; /* 442 x 2 + 45px padding */
+  .container-activite {
+    flex-wrap: wrap;
+    height: 930px; /* 442 x 2 + 45px padding */
   }
   .carte-large,
   .sous-container-activite {
     width: 48%; /* 4 flex items */
     height: 442px;
   }
-.container-activite > a:first-child,
-.container-activite > div:nth-child(2) {
-  margin-bottom: 45px; /* margin entre les 2 groupes de flex activités */
+  .container-activite > a:first-child,
+  .container-activite > div:nth-child(2) {
+    margin-bottom: 45px; /* margin entre les 2 groupes de flex activités */
+  }
+  footer div {
+    padding-left: 50px;
+  }
 }
-footer div {
-  padding-left: 50px;
-}
-} 
-/* media queries version MOBILE ET TABLETTE */
+
+/********************/
+/******************** version MOBILE ET TABLETTE < 1200px ********************/
+/********************/
 @media screen and (max-width: 1200px) {
   .containerTitreEtFiltres {
     flex-direction: column;
@@ -578,14 +702,7 @@ footer div {
   .containerHebergementsEtAside {
     flex-direction: column-reverse;
   }
-  aside {
-    margin-bottom: 35px; /* a regler */
-  }
   header {
     padding-left: 5px;
-  }
-  main {
-    padding-left: 5px;
-    padding-right: 5px;
   }
 }
