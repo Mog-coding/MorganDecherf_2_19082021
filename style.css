@@ -473,7 +473,6 @@ footer a:hover {
 /***************************************************************************/
 /******************** MEDIA QUERIES ****************************************/
 /***************************************************************************/
-/* 480px remplacé par 600px et 1024px par 1200px */
 
 /********************/
 /******************** version MOBILE < 400px ********************/
@@ -579,29 +578,38 @@ footer a:hover {
 @media screen and (max-width: 700px) {
   header {
     flex-direction: column;
-    position: absolute;
+    height: 135px;
+    position: relative;
   }
   header nav {
     display: flex;
   }
   header nav a {
     flex: 1;
-    height: 70px;
+    height: 50px;
   }
-  .sinscrire {
-    position: relative;
-    bottom: 5px;
-    right: 5px;
-  }
-  .reserviaImage {
+   .sinscrire {
+    position: absolute;
+    top: 35px;
+    right: 15px;
+    pointer-events: none;
+   }
+   .reserviaImage {
     height: 80px;
   }
   header nav a:hover {
-    position: relative;
-    top: 2px;
-    bottom: 0px;
-    border-bottom: rgb(0, 101, 252) 3px solid;
     border-top: rgb(0, 101, 252) 0px solid;
+    position: static;
+    color: black;
+  }
+  header nav a:first-child {
+    border-bottom: 3px rgb(0, 101, 252) solid;
+  }
+  header nav a:last-child {
+    border-bottom: 3px #f2f2f2 solid;
+  }
+  header::after{
+    content: none; /* supprime l'élément flex menu nav */
   }
   /* main recherche */
   .texteRechercher {
