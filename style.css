@@ -565,6 +565,7 @@ footer a:hover {
   footer {
     flex-direction: column;
     margin-top: 0px;
+    padding: 40px 30px 0px 30px;
   }
   footer div {
     margin-bottom: 30px;
@@ -577,15 +578,20 @@ footer a:hover {
 /*header*/
 @media screen and (max-width: 700px) {
   header {
-    flex-wrap: wrap;
+    flex-direction: column;
+    position: absolute;
   }
   header nav {
-    flex: 1;
-    order: 2;
-    height: 70px;
-   }
+    display: flex;
+  }
   header nav a {
     flex: 1;
+    height: 70px;
+  }
+  .sinscrire {
+    position: relative;
+    bottom: 5px;
+    right: 5px;
   }
   .reserviaImage {
     height: 80px;
@@ -616,15 +622,6 @@ footer a:hover {
 }
 
 /********************/
-/******************** version MOBILE intermédiaire > 600px, < 700px ********************/
-/********************/
-@media (min-width: 600px) and (max-width: 700px) {
-  .reserviaImage {
-    margin-right: 60px; /* force le wrap des 2 liens <a> */
-  }
-}
-
-/********************/
 /******************** version TABLETTE > 600px, < 1200px ********************/
 /********************/
 @media (min-width: 600px) and (max-width: 1200px) {
@@ -632,8 +629,10 @@ footer a:hover {
     padding-left: 5px;
     padding-right: 5px;
   }
-  .mainRecherche {
+  .mainRecherche,
+  .sectionActivite {
     padding-left: 40px;
+    padding-right: 40px;
   }
   .reserviaImage {
     margin-left: 40px;
@@ -663,7 +662,7 @@ footer a:hover {
   }
   .container-activite {
     flex-wrap: wrap;
-    height: 930px; /* 442 x 2 + 45px padding */
+    height: 930px; /* 442 x 2 + 45px */
   }
   .carte-large,
   .sous-container-activite {
