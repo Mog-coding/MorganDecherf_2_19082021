@@ -481,7 +481,7 @@ footer a:hover {
 /********************/
 @media screen and (max-width: 320px) {
   .search input {
-    min-width: 180px;
+    min-width: 155px;
   }
 }
 
@@ -502,7 +502,7 @@ footer a:hover {
     padding-right: 20px;
   }
   .search input {
-    width: 100%;
+    width: 180px;
   }
   .bouton {
     min-width: 50px;
