@@ -96,7 +96,7 @@ form {
 }
 .iconRecherche {
   height: 50px;
-  width: 50px;
+  min-width: 50px; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -114,7 +114,7 @@ form {
 }
 .search input {
   height: 48px;
-  width: 220px;
+  width: 220px; 
   font-size: 1.1em;
   outline: none; /* retire l'outline d'input quand on clique */
   border: none; /* retire la bordure grise d'input */
@@ -493,6 +493,12 @@ footer a:hover {
   .mainRecherche {
     padding-left: 20px;
     padding-right: 20px;
+  }
+  .search input {
+   width: 100%;
+  }
+  .bouton {
+    min-width: 50px;
   }
   aside {
     width: auto;
