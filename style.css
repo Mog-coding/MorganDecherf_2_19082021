@@ -116,8 +116,8 @@ form {
   height: 48px;
   width: 220px;
   font-size: 1.1em;
-  outline: none; /* retire l'outline d'input quand on clique */
-  border: none; /* retire la bordure grise d'input */
+  outline: none; 
+  border: none; 
   padding-left: 15px;
   color: black;
 }
@@ -168,7 +168,7 @@ form {
   height: 50px;
   width: 50px;
   background: rgb(222, 235, 255);
-  border-radius: 30px 30px 30px 30px;
+  border-radius: 30px;
   z-index: 2;
 }
 .texteFiltres {
@@ -211,7 +211,7 @@ form {
   margin-right: 10px;
   margin-left: 5px;
   border: grey 1px solid;
-  border-radius: 50%; /*crée un cercle*/
+  border-radius: 50%; 
   color: rgb(0, 101, 252);
 }
 /*alignement vertical de main recherche*/
@@ -238,13 +238,13 @@ main form {
   width: 59.2%; /* -2 padding */
   padding: 40px;
   background-color: #f2f2f2;
-  border-radius: 22px 22px 22px 22px;
+  border-radius: 22px;
 }
 aside {
   width: 25.5%;
   padding: 40px 40px 32px 40px;
   background-color: #f2f2f2;
-  border-radius: 22px 22px 22px 22px;
+  border-radius: 22px;
 }
 /* REGLAGES HEBERGEMENTS */
 .container-hebergements {
@@ -260,7 +260,7 @@ aside {
   padding: 5px;
   width: 30%; /* - padding */
   background-color: white;
-  border-radius: 22px 22px 22px 22px;
+  border-radius: 22px;
   box-shadow: 0 7px 13px -5px #c8c3c3;
 }
 .carte-hebergements img {
@@ -308,7 +308,7 @@ aside {
   height: 133px; /*-padding*/
   padding: 5px;
   background-color: white;
-  border-radius: 21px 21px 21px 21px;
+  border-radius: 21px;
   box-shadow: 0 7px 13px -5px #c8c3c3;
 }
 .image-aside {
@@ -350,7 +350,6 @@ aside {
 .legende-aside div:nth-child(2) {
   margin-bottom: 7px;
 }
-footer a,
 section a {
   text-decoration: none;
   color: black;
@@ -386,12 +385,13 @@ i {
   justify-content: space-between;
   height: 442px;
 }
+/* 4 flex items */
 .carte-large,
 .sous-container-activite {
-  width: 22.5%; /* 4 flex items */
+  width: 22.5%;
 }
 .sous-container-activite {
-  display: flex; /* image + div */
+  display: flex; 
   flex-direction: column;
   justify-content: space-between;
 }
@@ -418,11 +418,12 @@ section img {
   border-radius: 22px 22px 0px 0px;
   object-fit: cover;
 }
+/*tous les flex item*/
 .carte-medium,
 .carte-small,
 .carte-large {
-  box-shadow: 0 7px 13px -5px #c8c3c3; /*tous les flex item*/
-  border-radius: 22px 22px 22px 22px;
+  box-shadow: 0 7px 13px -5px #c8c3c3; 
+  border-radius: 22px;
 }
 .carte-large div,
 .carte-medium div,
@@ -432,13 +433,7 @@ section img {
   margin-top: 16px;
   margin-left: 22px;
 }
-.carte-large a,
-.carte-medium a,
-.carte-small a {
-  text-decoration: none;
-}
 .sectionActivite h2 {
-  /*titre activite */
   font-size: 1.4em;
   margin: 0px 0px 20px 0px;
 }
@@ -467,6 +462,10 @@ footer ul {
 footer ul li {
   list-style-type: none;
   padding-bottom: 12px;
+}
+footer a {
+  text-decoration: none;
+  color: black;
 }
 footer a:hover {
   color: rgb(0, 101, 252);
@@ -513,7 +512,7 @@ footer a:hover {
     padding: 40px 20px 32px 20px;
     margin-bottom: 0px;
     background-color: #f2f2f2;
-    border-radius: 0px 0px 0px 0px;
+    border-radius: 0px;
   }
   .container-aside {
     flex-direction: column;
@@ -553,13 +552,14 @@ footer a:hover {
     justify-content: space-between;
     height: 1240px;
   }
+  /* 4 flex items */
   .carte-large,
   .sous-container-activite {
-    width: 100%; /* 4 flex items */
+    width: 100%; 
   }
   .sous-container-activite {
     display: flex;
-    flex-direction: column; /* image + div */
+    flex-direction: column; 
     justify-content: space-between;
     height: 400px;
   }
@@ -622,7 +622,7 @@ footer a:hover {
     border-bottom: 3px #f2f2f2 solid;
   }
   header::after {
-    content: none; /* supprime l'élément flex menu nav */
+    content: none; 
   }
   /* main recherche */
   .texteRechercher {
@@ -635,7 +635,7 @@ footer a:hover {
     width: 50px;
     position: relative;
     right: 15px;
-    border-radius: 15px 15px 15px 15px;
+    border-radius: 15px;
   }
   .bouton i {
     font-size: 1em;
@@ -683,16 +683,18 @@ footer a:hover {
   }
   .container-activite {
     flex-wrap: wrap;
-    height: 930px; /* 442 x 2 + 45px */
+    height: 930px; 
   }
+  /* 4 flex items */
   .carte-large,
   .sous-container-activite {
-    width: 48%; /* 4 flex items */
+    width: 48%; 
     height: 442px;
   }
+  /* margin entre les 2 groupes de flex activités */
   .container-activite > a:first-child,
   .container-activite > div:nth-child(2) {
-    margin-bottom: 45px; /* margin entre les 2 groupes de flex activités */
+    margin-bottom: 45px; 
   }
   footer div {
     padding-left: 50px;
